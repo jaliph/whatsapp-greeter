@@ -1,0 +1,8 @@
+{
+  "Avi": {
+    "number": "9827064643",
+    "cron": "0/30 * * * *",
+    "message": "Hello Avi, This a scheduled message. Love you always",
+    "timezone": "Asia/Kolkata"
+  }
+}

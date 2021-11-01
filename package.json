@@ -1,0 +1,31 @@
+{
+  "name": "whatsapp-greeter",
+  "version": "1.0.0",
+  "description": "A whatsapp client to schedule messages for loved ones on set intervals",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaliph/whatsapp-greeter.git"
+  },
+  "keywords": [
+    "whatsapp",
+    "whatsapp",
+    "bulk",
+    "schedule"
+  ],
+  "author": "Akash Chandra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaliph/whatsapp-greeter/issues"
+  },
+  "homepage": "https://github.com/jaliph/whatsapp-greeter#readme",
+  "dependencies": {
+    "cron": "^1.8.2",
+    "qrcode": "^1.4.4",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "github:pedroslopez/whatsapp-web.js#multidevice"
+  }
+}
