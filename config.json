@@ -1,8 +1,8 @@
 {
   "Avi": {
-    "number": "9827064643",
+    "number": "<India base number without +91>",
     "cron": "0/30 * * * *",
-    "message": "Hello Avi, This a scheduled message. Love you always",
+    "message": "A dummy message..,
     "timezone": "Asia/Kolkata"
   }
 }
