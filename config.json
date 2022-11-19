@@ -1,8 +1,47 @@
 {
-  "Avi": {
+  "Avi Good Morning": {
     "number": "9827064643",
-    "cron": "0/30 * * * *",
-    "message": "Hello Avi, This a scheduled message. Love you always",
+    "cron": "30 6 * * *",
+    "generator": "gm-wife.json",
+    "message": "Good morning Wifey, This a scheduled message. Love you always",
+    "timezone": "America/Los_Angeles"
+  },
+  "Avi Good Night": {
+    "number": "9827064643",
+    "cron": "55 22 * * *",
+    "generator": "gn-wife.json",
+    "message": "Good night Wifey, This a scheduled message. Love you always",
+    "timezone": "America/Los_Angeles"
+  },
+  "Avi's Chacha": {
+    "number": "7503959759",
+    "cron": "30 6 * * *",
+    "message": "Good morning Uncle ji. Have a nice day.",
+    "timezone": "Asia/Kolkata"
+  },  
+  "Avi's Mom": {
+    "number": "8009578605",
+    "cron": "30 6 * * *",
+    "message": "Good morning Mummy ji. Have a nice day.",
+    "timezone": "Asia/Kolkata"
+  },
+  "Avi's Chachi" : {
+    "number": "9868808319",
+    "cron": "30 6 * * *",
+    "message": "Good morning Aunty ji. Have a nice day.",
+    "timezone": "Asia/Kolkata"
+  },
+  "Avi's Dad" : {
+    "number": "9415924831",
+    "cron": "30 6 * * *",
+    "message": "Good morning Papa ji. Have a nice day.",
+    "timezone": "Asia/Kolkata"
+  },
+  "Maa": {
+    "number": "9801779279",
+    "cron": "30 6 * * *",
+    "generator": "gm-mom.json",
+    "message": "Good morning Maa. Have a nice day.",
     "timezone": "Asia/Kolkata"
   }
 }

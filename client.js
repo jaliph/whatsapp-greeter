@@ -1,12 +1,16 @@
 // const fs = require('fs')
 // const path = require('path')
-const { Client } = require('whatsapp-web.js')
+const { Client, LocalAuth } = require('whatsapp-web.js')
 const qrcode = require('qrcode-terminal')
 
 // Use the saved values
-const client = new Client({ puppeteer: { headless: false, args: ['--no-sandbox'] }, clientId: 'example' })
+const client = new Client({ 
+  puppeteer: { headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] }, 
+  authStrategy: new LocalAuth({ clientId: "client-one" })
+})
 
 const initialize = () => {
+  console.log('Initialising Whatsapp!!')
   return new Promise((resolve, reject) => {
     // Save session values to the file upon successful auth
     client.on('authenticated', (session) => {

@@ -1,6 +1,10 @@
 const { initialize } = require('./client')
 const config = require('./config.json')
+const MessageGenerator = require('./MessageGenerator')
 const countryCode = '91'
+
+const minMins = 10 * 60 * 1000
+const maxMins = 15 * 60 * 1000
 
 initialize().then(async (client) => {
   console.log('Scheduling as per the crons!!')
@@ -16,10 +20,15 @@ initialize().then(async (client) => {
       const job = new CronJob(entry.cron, async function () {
         console.log(`You will see this message every time cron is scheduled for entry ${i}`)
         try {
-          await client.sendMessage(numberDetails._serialized, entry.message)
-          console.log(`Message sent successfully to ${entry.number}...`)
+          const scheduleAt = Math.ceil(((Math.random() * (maxMins - minMins)) + minMins))
+          console.log(`Introducing a random delay of the message by ${scheduleAt} ms`)
+          setTimeout(async () => {
+            let finalMessage = entry.generator ? await MessageGenerator.getMessage(entry.generator) : entry.message
+            await client.sendMessage(numberDetails._serialized, finalMessage)
+            console.log(`Message :: ${finalMessage} :: sent successfully to ${entry.number}... @ ${new Date()}`)
+          },  scheduleAt )
         } catch (error) {
-          console.log(`Message send failure for ${entry.number}`)
+          console.log(`Message send failure for ${entry.number} @ ${new Date()}`, error)
         }
       }, null, true, entry.timezone)
       job.start()
