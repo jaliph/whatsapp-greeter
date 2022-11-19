@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "Avi Good Morning": {
     "number": "9827064643",
     "cron": "30 6 * * *",
@@ -42,6 +43,12 @@
     "cron": "30 6 * * *",
     "generator": "gm-mom.json",
     "message": "Good morning Maa. Have a nice day.",
+=======
+  "Avi": {
+    "number": "<India base number without +91>",
+    "cron": "0/30 * * * *",
+    "message": "A dummy message..,
+>>>>>>> 536146a150f4a002e482eb2bef043204b9326207
     "timezone": "Asia/Kolkata"
   }
 }
