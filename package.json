@@ -4,6 +4,8 @@
   "description": "A whatsapp client to schedule messages for loved ones on set intervals",
   "main": "app.js",
   "scripts": {
+    "run": "node app.js",
+    "start": "node app.js",
     "test": "npm run test"
   },
   "repository": {
