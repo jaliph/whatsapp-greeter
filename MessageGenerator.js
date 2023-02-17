@@ -60,12 +60,18 @@ const messageFileParser = (filePath) => {
 
 // const driver = async () => {
 //   const messageGenerator = new MessageGenerator()
-//   for(let i = 0; i < 147; i++ ) {
-//     await messageGenerator.getMessages('gm-wife.json')
-//     await messageGenerator.getMessages('gn-wife.json')
-//   }
-//   console.log(await messageGenerator.getMessages('gm-wife.json'))
-//   console.log(await messageGenerator.getMessages('gn-wife.json'))
+//   console.log(await messageGenerator.set('gm-wife.json', '80'))
+//   console.log(await messageGenerator.set('gn-wife.json', '78'))
+//   console.log(await messageGenerator.set('gm-mom.json', '21'))
+//   console.log(await messageGenerator.get('gm-wife.json'))
+//   console.log(await messageGenerator.get('gn-wife.json'))
+//   console.log(await messageGenerator.get('gm-mom.json'))
+//   // for(let i = 0; i < 147; i++ ) {
+//   //   await messageGenerator.getMessages('gm-wife.json')
+//   //   await messageGenerator.getMessages('gn-wife.json')
+//   // }
+//   // console.log(await messageGenerator.getMessages('gm-wife.json'))
+//   // console.log(await messageGenerator.getMessages('gn-wife.json'))
 //   // await messageGenerator.set('foo', '1')
 //   // let data = await messageGenerator.get('foo')
 //   // let data1 = await messageGenerator.get('foo1')
@@ -73,5 +79,7 @@ const messageFileParser = (filePath) => {
 //   // console.log(data1)
  
 // }
+
+// driver()
 
 module.exports = new MessageGenerator()

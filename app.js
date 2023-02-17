@@ -26,7 +26,7 @@ initialize().then(async (client) => {
             let finalMessage = entry.generator ? await MessageGenerator.getMessage(entry.generator) : entry.message
             await client.sendMessage(numberDetails._serialized, finalMessage)
             console.log(`Message :: ${finalMessage} :: sent successfully to ${entry.number}... @ ${new Date()}`)
-          },  scheduleAt )
+          }, scheduleAt )
         } catch (error) {
           console.log(`Message send failure for ${entry.number} @ ${new Date()}`, error)
         }
@@ -39,3 +39,9 @@ initialize().then(async (client) => {
 }).catch((err) => {
   console.log('Initialization failed.. exiting...', err)
 })
+
+
+process.on('unhandledRejection', error => {
+  console.error('unhandledRejection -> ', error)
+  process.exit(1)
+});
