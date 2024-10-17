@@ -4,18 +4,18 @@
     "cron": "30 6 * * *",
     "generator": "gm-wife.json",
     "message": "Good morning Wifey, This a scheduled message. Love you always",
-    "timezone": "America/Los_Angeles"
+    "timezone": "Asia/Kolkata"
   },
   "Avi Good Night": {
     "number": "9827064643",
     "cron": "55 22 * * *",
     "generator": "gn-wife.json",
     "message": "Good night Wifey, This a scheduled message. Love you always",
-    "timezone": "America/Los_Angeles"
+    "timezone": "Asia/Kolkata"
   },
   "Avi's Chacha": {
     "number": "7503959759",
-    "cron": "30 6 * * *",
+    "cron": "00 6 * * *",
     "message": "Good morning Uncle ji. Have a nice day.",
     "timezone": "Asia/Kolkata"
   },  
@@ -27,7 +27,7 @@
   },
   "Avi's Chachi" : {
     "number": "9868808319",
-    "cron": "30 6 * * *",
+    "cron": "00 6 * * *",
     "message": "Good morning Aunty ji. Have a nice day.",
     "timezone": "Asia/Kolkata"
   },
@@ -42,6 +42,12 @@
     "cron": "30 6 * * *",
     "generator": "gm-mom.json",
     "message": "Good morning Maa. Have a nice day.",
+    "timezone": "Asia/Kolkata"
+  },
+  "Maa Night": {
+    "number": "9801779279",
+    "cron": "30 22 * * *",
+    "message": "Hope! you had a good day. Good night. Sweet Dreams..",
     "timezone": "Asia/Kolkata"
   }
 }

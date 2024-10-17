@@ -1,0 +1,17 @@
+[Unit]
+Description=whatsapp service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+WorkingDirectory=/home/devuser/development/whatsapp-greeter
+ExecStart=/usr/bin/node /home/devuser/development/whatsapp-greeter/app.js 
+StandardOutput=append:/var/log/whatsapp_service.log
+StandardError=append:/var/log/whatsapp_service.log
+
+[Install]
+WantedBy=multi-user.target

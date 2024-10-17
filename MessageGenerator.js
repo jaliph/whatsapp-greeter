@@ -2,9 +2,12 @@ const cacache = require('cacache')
 const path = require('path')
 const fs = require('fs')
 
+const CACHE_DIR = process.env.CACHE_DIR || '/usr/src/app/data/.cache'
+
 class MessageGenerator {
-  constructor(opts) {
-    this.cachePath = path.join(__dirname, './.cache')
+  constructor (opts) {
+    console.log('Using cache dir::', CACHE_DIR)
+    this.cachePath = CACHE_DIR
   }
 
   async getMessage (fileName) {
@@ -29,17 +32,17 @@ class MessageGenerator {
   //   return todaysMessage
   // }
 
-  async get(key) {
+  async get (key) {
     try {
-      let { data } = await cacache.get(this.cachePath, key)
+      const { data } = await cacache.get(this.cachePath, key)
       return data.toString()
     } catch (error) {
       console.error(`Some error happened for the key ${key} !`, error)
     }
     return undefined
   }
-  
-  async set(key, value) {
+
+  async set (key, value) {
     await cacache.put(this.cachePath, key, value)
   }
 }
@@ -56,7 +59,6 @@ const messageFileParser = (filePath) => {
   }
   return []
 }
-
 
 // const driver = async () => {
 //   const messageGenerator = new MessageGenerator()
@@ -77,7 +79,7 @@ const messageFileParser = (filePath) => {
 //   // let data1 = await messageGenerator.get('foo1')
 //   // console.log(Number(data))
 //   // console.log(data1)
- 
+
 // }
 
 // driver()

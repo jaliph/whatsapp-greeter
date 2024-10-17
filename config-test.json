@@ -1,0 +1,9 @@
+{
+  "Avi Good Morning": {
+    "number": "9827064643",
+    "cron": "30 6 * * *",
+    "generator": "gm-wife.json",
+    "message": "Good morning Wifey, This a scheduled message. Love you always",
+    "timezone": "Asia/Kolkata"
+  }
+}
